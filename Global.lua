@@ -1,4 +1,5 @@
 function onLoad()
+    hotkey_onload()
     -- Panel with setup buttons
     math.randomseed(os.time())
     gButtonPanel = getObjectFromGUID("4e93a3")
