@@ -1,4 +1,4 @@
---Rally - The Climb
+-- Rally - The Climb
 function onload()
     createButtons()
 end
@@ -98,31 +98,82 @@ function SS1()
 end
 
 function SS2()
-    print("To be implemented once RX expansion is prepared, sorry!")
-    --[[
-Global.call('cleanTable')
-    TileList = {
-        {Number = '301a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '302a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '305a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '310a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '312a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '313a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '318a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '319a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '320a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '325a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '326a',location = {0,5,0},   rotation= {0, 120, 0}},
-        {Number = '419a',location = {0,5,0},   rotation= {0, 120, 0}},
+    Global.call('cleanTable')
+    TileList = {{
+        Number = '301a',
+        location = {-19.38, 0.96, -1.17},
+        rotation = {0, 180, 0}
+    }, {
+        Number = '302a',
+        location = {17.58, 0.96, -11.935},
+        rotation = {0, 0, 0}
+    }, {
+        Number = '305a',
+        location = {-5.516, 0.96, -3.865},
+        rotation = {0, 120, 0}
+    }, {
+        Number = '310a',
+        location = {3.718, 1.052, -3.855},
+        rotation = {0, 180, 0}
+    }, {
+        Number = '311a',
+        location = {-10.229, 1.056, -1.168},
+        rotation = {0, 180, 0}
+    }, {
+        Number = '312a',
+        location = {3.715, 0.96, -9.243},
+        rotation = {0, 0, 0}
+    }, {
+        Number = '313a',
+        location = {-19.38, 0.96, -6.55},
+        rotation = {0, 60, 0}
+    }, {
+        Number = '318a',
+        location = {-10.137, 0.96, -6.552},
+        rotation = {0, 0, 0}
+    }, {
+        Number = '319a',
+        location = {12.952, 0.96, -3.857},
+        rotation = {0, 240, 0}
+    }, {
+        Number = '320a',
+        location = {17.657, 0.96, -6.551},
+        rotation = {0, 300, 0}
+    }, {
+        Number = '325a',
+        location = {-0.899, 0.96, -6.551},
+        rotation = {0, 300, 0}
+    }, {
+        Number = '326a',
+        location = {-14.761, 0.96, -3.86},
+        rotation = {0, 240, 0}
+    }, {
+        Number = '419a',
+        location = {8.341, 0.96, -6.551},
+        rotation = {0, 60, 0}
+    }, {
+        Number = '901b',
+        location = {12.958, 0.96, -14.624},
+        rotation = {0, 0, 0}
+    }, {
+        Number = '902a',
+        location = {8.341, 0.96, -11.929},
+        rotation = {0, 120, 0}
+    }, {
+        Number = '903a',
+        location = {12.957, 0.96, -9.24},
+        rotation = {0, 120, 0}
+    }, {
+        Number = '904b',
+        location = {-0.824, 0.96, -1.185},
+        rotation = {0, 240, 0}
+    }, {
+        Number = '905a',
+        location = {-5.519, 0.96, -9.248},
+        rotation = {0, 120, 0}
+    }}
 
-        {Number = '901b',location = {6.03, 0.96, -3.87},   rotation= {0, 120, 0}},
-        {Number = '902a',location = {-3.22, 0.96, -3.86},   rotation= {0, 120, 0}},
-        {Number = '903a',location = {-7.83, 0.96, -1.17},   rotation= {0, 120, 0}},
-        {Number = '904b',location = {10.65, 0.96, -1.17},   rotation= {0, 120, 0}},
-        {Number = '905a',location = {1.41, 0.96, -1.17},   rotation= {0, 120, 0}},
-    }
     for _, Tile in ipairs(TileList) do
-        Global.call('GetTile', Tile )
+        Global.call('GetTile', Tile)
     end
-      --]]
 end
