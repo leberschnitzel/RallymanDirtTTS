@@ -1,12 +1,11 @@
 function resetTable()
     print("Cleaning The Climb Tiles")
-    TableContent = getObjects()
-    for _, Tile in ipairs(TableContent) do
-        TileName = Tile.getName()
-        if string.sub(TileName, 1, 3) == "325" or string.sub(TileName, 1, 3) == "326" or string.sub(TileName, 1, 3) ==
-            "418" or string.sub(TileName, 1, 3) == "419" then
-            Tile.setLock(false)
-            self.putObject(Tile)
+    for _, tile in ipairs(getObjects()) do
+        local name = tile.getName()
+        local first3 = name:sub(1, 3)
+        if first3 == "325" or first3 == "326" or first3 == "418" or first3 == "419" then
+            tile.setLock(false)
+            self.putObject(tile)
         end
     end
 end
