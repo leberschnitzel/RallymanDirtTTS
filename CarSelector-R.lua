@@ -1,45 +1,22 @@
-function onload()
-    createButtons()
+function onLoad()
+    -- create button to clean table
+    button = {}
+    button.click_function = "r5"
+    button.function_owner = self
+    button.label = "R5"
+    button.alignment = 3
+    button.position = {0, 0.5, 0.4}
+    button.width = 1300
+    button.scale = {0.3, 0.2, 0.3}
+    button.height = 300
+    button.font_size = 250
+    self.createButton(button)
 end
 
-function createButtons()
-    self.createButton({
-        click_function = "R6",
-        function_owner = self,
-        position = {0, 0.5, -0.3},
-        height = 100,
-        width = 400,
-        color = {0, 1, 0, 1},
-        label = "R6"
-    })
-    self.createButton({
-        click_function = "R5",
-        function_owner = self,
-        position = {0, 0.5, 0},
-        height = 100,
-        width = 400,
-        color = {0, 1, 0, 1},
-        label = "R5"
-    })
-    self.createButton({
-        click_function = "R4",
-        function_owner = self,
-        position = {0, 0.5, 0.3},
-        height = 100,
-        width = 400,
-        color = {0, 1, 0, 1},
-        label = "R4"
-    })
-end
-
-function R6()
-    Global.call('GetDashboard', 'R6-Gravel')
-end
-
-function R5()
-    Global.call('GetDashboard', 'R5-Gravel')
-end
-
-function R4()
-    Global.call('GetDashboard', 'R4-Gravel')
+function r5()
+    Dashboards = {
+        name = 'R5',
+        location = {-39.74, 0.87, -31.96}
+    }
+    Global.call('getDashboards', Dashboards)
 end
